@@ -2,7 +2,7 @@ import telebot
 from moviepy.editor import VideoFileClip
 import os
 
-bot = telebot.TeleBot('1972875235:AAFvDrQTPfviteeV-hVqs2CiDVXKDhnaXj0')
+bot = telebot.TeleBot('YOUR BOT TOKEN')
 
 
 @bot.message_handler(commands=['start'])
@@ -28,10 +28,4 @@ def convert(msg):
 	except Exception as ex:
 		bot.send_message(msg.chat.id,'Xato... , Shartlarni to\'g\'ri bajaring!')
 		print(ex)
-	# file_id = msg.video.file_id
-	# file = bot.get_file(file_id)
-	# file_path = file.file_path
-	# s = bot.download_file(file_path)
-	# with open(f'{msg.chat.id}.mp4', 'wb') as new_file:
-	# 	new_file.write(s)
 bot.polling(none_stop=True)

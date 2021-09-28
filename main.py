@@ -27,5 +27,4 @@ def convert(msg):
 		os.unlink(f'{msg.chat.id}.gif')
 	except Exception as ex:
 		bot.send_message(msg.chat.id,'Xato... , Shartlarni to\'g\'ri bajaring!')
-		print(ex)
 bot.polling(none_stop=True)
